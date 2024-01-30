@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    echo "FFFFFFFFF";
+    $users = DB::select('select * from cim_suits');
+    dd($users);
     return view('welcome');
 });

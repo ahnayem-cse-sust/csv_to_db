@@ -2,6 +2,11 @@
 
 return [
 
+    'users' => [
+        'driver' => 'oracle',
+        'model' => App\User::class,
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Authentication Defaults
