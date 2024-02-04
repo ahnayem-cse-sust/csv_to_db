@@ -56,8 +56,8 @@ return [
             'throw' => false,
         ],
 
-        'ftp' => [
-            'driver' => 'ftp',
+        'sftp' => [
+            'driver' => 'sftp',
             'host' => env('FTP_HOST'),
             'username' => env('FTP_USERNAME'),
             'password' => env('FTP_PASSWORD'),
@@ -65,6 +65,17 @@ return [
             'root' => env('FTP_ROOT'),
             'ssl'      => env('FTP_SSL', false),
             'timeout'  => env('FTP_TIMEOUT', 30)
+        ],
+
+        'sftp_2' => [
+            'driver' => 'sftp',
+            'host' => env('FTP_HOST_2'),
+            'username' => env('FTP_USERNAME_2'),
+            'password' => env('FTP_PASSWORD_2'),
+            'port'     => (int)env('FTP_PORT_2'),
+            'root' => env('FTP_ROOT_2'),
+            'ssl'      => env('FTP_SSL_2', false),
+            'timeout'  => env('FTP_TIMEOUT_2', 30)
         ]
 
     ],
