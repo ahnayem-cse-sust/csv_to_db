@@ -15,10 +15,20 @@ class DataReadController extends Controller
 
     public function suit()
     {
-
+        
         // $handle = fopen(public_path("SUIT.INFO.20240119.csv"), 'r');
-        $filename = "SUIT.INFO.20240202.csv";
-        $handle = Storage::disk('sftp')->download($filename);
+        $filename = 'SUIT.INFO.20240202.csv';
+        // $handle = Storage::disk('sftp')->download($filename);
+        // Storage::disk('sftp_2')->putFile('/', Storage::disk('sftp')->download($filename));
+        // $handle1 = fopen(Storage::disk('sftp')->get($filename), "r");
+        // $handle2 = fopen($filename, "w");
+
+        // $handle = Storage::disk('local')->writeStream('csvData/'.$filename, Storage::disk('sftp')->readStream($filename));
+
+        $cmd="sqlldr ".env('DB_USERNAME')."/".env('DB_PASSWORD')."@172.17.22.51:1521/rptdemo control=E:/gitProject/csv_to_db/laravelApp/storage/app/csvData/ctl_cim_suits.ctl";
+        system($cmd,$return_value);
+
+        dd($return_value);
       
         // while (($line = fgetcsv($handle, 4096)) !== false) {
         //     $dataString = implode("| ", $line);
