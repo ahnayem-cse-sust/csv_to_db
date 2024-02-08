@@ -2,7 +2,6 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DataReadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,11 +15,14 @@ use App\Http\Controllers\DataReadController;
 */
 
 
-Route::get('/readCsv', [DataReadController::class, 'suit']);
+Route::get('/readCsv', [App\Http\Controllers\DataReadController::class, 'suit']);
 
+Route::post('/register', [App\Http\Controllers\AuthController::class, 'register']);
+Route::post('/login', [App\Http\Controllers\AuthController::class, 'login']);
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:sanctum')->group(function () {
+    Route::post('/logout', [App\Http\Controllers\AuthController::class, 'logout']);
+    Route::get('/user', [App\Http\Controllers\AuthController::class, 'user']);
 });
 
 
