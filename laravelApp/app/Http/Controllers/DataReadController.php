@@ -17,15 +17,15 @@ class DataReadController extends Controller
     {
         
         // $handle = fopen(public_path("SUIT.INFO.20240119.csv"), 'r');
-        $filename = 'SUIT.INFO.20240202.csv';
+        $filename = 'SUIT.INFO.20240210.csv';
         // $handle = Storage::disk('sftp')->download($filename);
         // Storage::disk('sftp_2')->putFile('/', Storage::disk('sftp')->download($filename));
         // $handle1 = fopen(Storage::disk('sftp')->get($filename), "r");
         // $handle2 = fopen($filename, "w");
 
-        // $handle = Storage::disk('local')->writeStream('csvData/'.$filename, Storage::disk('sftp')->readStream($filename));
+        $handle = Storage::disk('local')->writeStream('csvData/'.$filename, Storage::disk('sftp')->readStream($filename));
 
-        $cmd="sqlldr ".env('DB_USERNAME')."/".env('DB_PASSWORD')."@172.17.22.51:1521/rptdemo control=E:/gitProject/csv_to_db/laravelApp/storage/app/csvData/ctl_cim_suits.ctl";
+        $cmd="sqlldr ".env('ORACLE_DB_USERNAME')."/".env('ORACLE_DB_PASSWORD')."@172.17.22.51:1521/rptdemo control=E:/gitProject/csv_to_db/laravelApp/storage/app/csvData/ctl_cim_suits.ctl";
         system($cmd,$return_value);
 
         dd($return_value);
