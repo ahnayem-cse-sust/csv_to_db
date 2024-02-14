@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import axios from '../axios';
 import { useAuth } from '../contexts/AuthContext';
+import SidebarComponent from './SidebarComponent';
 
 export default function DefaultLayout() {
 	const { user, setUser } = useAuth();
@@ -46,13 +47,9 @@ export default function DefaultLayout() {
 			<nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
 				<div className="container flex flex-wrap items-center justify-between mx-auto">
 					<a href="https://dcodemania.com/" className="flex items-center">
-						<img
-							src="https://dcodemania.com/img/logo.svg"
-							className="h-6 mr-3 sm:h-9"
-							alt="DCodeMania Logo"
-						/>
+						
 						<span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-							DCodeMania
+							Data Manager
 						</span>
 					</a>
 					<button
@@ -76,7 +73,7 @@ export default function DefaultLayout() {
 					</button>
 					<div className="hidden w-full md:block md:w-auto" id="navbar-default">
 						<ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-							<li>
+							{/* <li>
 								<NavLink
 									to="/profile"
 									className={({ isActive }) =>
@@ -97,7 +94,7 @@ export default function DefaultLayout() {
 									}>
 									About
 								</NavLink>
-							</li>
+							</li> */}
 
 							<li>
 								<a
@@ -111,9 +108,17 @@ export default function DefaultLayout() {
 					</div>
 				</div>
 			</nav>
-			<main className="container flex justify-center flex-col items-center mt-10">
-				<Outlet />
-			</main>
+			<div className='grid grid-cols-6'>
+				<div >
+					<SidebarComponent/>
+				</div>
+				<div className='col-span-5'>
+				<main className="container flex justify-center flex-col items-center mt-10">
+					<Outlet />
+				</main>
+				</div>
+			</div>
+			
 		</>
 	);
 }
