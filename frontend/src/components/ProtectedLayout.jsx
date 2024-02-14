@@ -5,6 +5,7 @@ import axios from '../axios';
 import { useAuth } from '../contexts/AuthContext';
 import SidebarComponent from './SidebarComponent';
 
+
 export default function DefaultLayout() {
 	const { user, setUser } = useAuth();
 
@@ -44,7 +45,7 @@ export default function DefaultLayout() {
 	};
 	return (
 		<>
-			<nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
+			<nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900 nav-custom">
 				<div className="container flex flex-wrap items-center justify-between mx-auto">
 					<a href="https://dcodemania.com/" className="flex items-center">
 						
@@ -109,11 +110,11 @@ export default function DefaultLayout() {
 				</div>
 			</nav>
 			<div className='grid grid-cols-6'>
-				<div >
+				<div className='sidebar-custom'>
 					<SidebarComponent/>
 				</div>
 				<div className='col-span-5'>
-				<main className="container flex justify-center flex-col items-center mt-10">
+				<main className="container flex justify-center flex-col items-center mt-10 dm-content">
 					<Outlet />
 				</main>
 				</div>

@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-custom{
+    background-color: #a9b8d5;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.sidebar-custom{
+    background-color: #c7cdd6;
+    position: absolute;
+    top: 72px;
+    min-height: 100%;
+}
+
+.dm-content{
+    margin-left: 200px;
+    margin-top: 72px;;
+}
