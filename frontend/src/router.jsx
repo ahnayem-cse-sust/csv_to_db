@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Login from './pages/Login';
 import About from './pages/About';
 import Profile from './pages/Profile';
+import Suit from './pages/Suit';
 import Register from './pages/Register';
 import ProtectedLayout from './components/ProtectedLayout';
 import GuestLayout from './components/GuestLayout';
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
 			{
 				path: '/profile',
 				element: <Profile />,
+			},
+			{
+				path: '/suit',
+				element: <Suit />,
 			},
 		],
 	},

@@ -8,19 +8,7 @@ export default function SidebarComponent() {
 	return (
 		<>
 			<Sidebar>
-				<Menu
-					menuItemStyles={{
-					button: {
-						// the active class will be added automatically by react router
-						// so we can use it to style the active menu item
-						[`&.active`]: {
-						backgroundColor: '#13395e',
-						color: '#b6c8d9',
-						},
-					},
-					}}
-				>
-					<MenuItem >
+				<Menu className='menu'>
 						<NavLink
 									to="/profile"
 									className={({ isActive }) =>
@@ -30,8 +18,6 @@ export default function SidebarComponent() {
 									}>
 									Profile
 						</NavLink>
-					</MenuItem>
-					<MenuItem>
 						<NavLink
 									to="/suit"
 									className={({ isActive }) =>
@@ -41,8 +27,6 @@ export default function SidebarComponent() {
 									}>
 									Suit
 						</NavLink>
-					</MenuItem>
-					<MenuItem>
 						<NavLink
 									to="/about"
 									className={({ isActive }) =>
@@ -52,7 +36,6 @@ export default function SidebarComponent() {
 									}>
 									About
 						</NavLink>	
-					</MenuItem>
 				</Menu>
 			</Sidebar>
 		</>

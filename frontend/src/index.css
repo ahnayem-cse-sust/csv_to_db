@@ -20,3 +20,14 @@
     margin-left: 200px;
     margin-top: 72px;;
 }
+
+.menu .block{
+    padding: 10px;
+    background-color: #c7cdd6;
+    border-radius: 0%;
+}
+
+.menu .block:hover{
+    background-color: rgb(65, 65, 90);
+    color: aqua;
+}
