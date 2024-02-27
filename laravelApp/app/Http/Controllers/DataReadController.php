@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Suit;
-use Illuminate\Support\Facades\Storage;
 
 class DataReadController extends Controller
 {
@@ -13,8 +12,11 @@ class DataReadController extends Controller
         
     }
 
-    public function suit()
+    public function suit($date)
     {
+        $suit = new \App\Http\Services\SuitService();
+
+        return $suit->suit($date);
         
         // $handle = fopen(public_path("SUIT.INFO.20240119.csv"), 'r');
         $filename = 'SUIT.INFO.20240210.csv';
