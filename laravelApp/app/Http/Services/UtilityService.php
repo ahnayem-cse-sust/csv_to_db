@@ -20,6 +20,19 @@ class UtilityService{
        return Storage::put( 'ctl/'.$file, $content);
     }
 
+    public function deleteCtl($file,$content){
+        return Storage::delete('ctl/'.$file);
+     }
+
+    public function runLoader($file){
+        $cmd="sqlldr ".env('ORACLE_DB_USERNAME')."/".env('ORACLE_DB_PASSWORD')."@".
+        env('ORACLE_DB_HOST').":".env('ORACLE_DB_PORT')."/".env('ORACLE_DB_SERVICE_NAME')." 
+        control=".env('STORAGE_LOCATION')."ctl/".$file;
+        $output=null;
+        $retval=null;
+        exec($cmd, $output, $retval);
+    }
+
     public function getCtlHead($data_file){
         $content = 'LOAD DATA
 

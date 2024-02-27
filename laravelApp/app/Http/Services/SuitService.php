@@ -20,7 +20,9 @@ class SuitService{
         $ctl_file = 'ctl_cim_suits.ctl';
         $ctlCreated = $this->util->createCtl($ctl_file,$ctl_content);
 
-        dd($ctlCreated);
+        $runLoader = $this->util->runLoader($ctl_file);
+
+        $ctlDlt = $this->util->deleteCtl($ctl_file);
 
     }
 
