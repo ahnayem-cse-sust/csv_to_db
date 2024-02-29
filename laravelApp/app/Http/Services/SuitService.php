@@ -11,23 +11,21 @@ class SuitService{
     }
 
     public function suit($date){
-
         $data_file = 'SUIT.INFO.'.$date.'.csv';
+        if($this->util->downloadCsv($data_file)){
+            $ctl_file = 'ctl_cim_suits.ctl';
+            $ctl_content = $this->getSuitCtlContent($data_file,$date);
 
-        $download_csv = $this->util->downloadCsv($data_file);
-        dd($download_csv);
+            if($this->util->createCtl($ctl_file,$ctl_content)){
+                if($this->util->createTable("cim_suits",$date)){
 
-        $ctl_file = 'ctl_cim_suits.ctl';
-        $ctl_content = $this->getSuitCtlContent($data_file,$date);
-        $ctlCreated = $this->util->createCtl($ctl_file,$ctl_content);
-
-        $this->util->createTable("cim_suits");
-
-        $runLoader = $this->util->runLoader($ctl_file);
-
-        $ctlDlt = $this->util->deleteCtl($ctl_file);
-        dd($ctlDlt);
-
+                    $runLoader = $this->util->runLoader($ctl_file);
+                    $ctlDlt = $this->util->deleteCtl($ctl_file);
+                    return $runLoader;
+                }
+            }
+        }
+        return false;
     }
 
     private function getSuitCtlContent($data_file,$date){

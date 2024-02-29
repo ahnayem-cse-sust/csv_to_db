@@ -1,12 +1,12 @@
 
-SQL*Loader: Release 19.0.0.0.0 - Production on Mon Feb 12 16:22:59 2024
+SQL*Loader: Release 19.0.0.0.0 - Production on Thu Feb 29 11:56:03 2024
 Version 19.21.0.0.0
 
 Copyright (c) 1982, 2023, Oracle and/or its affiliates.  All rights reserved.
 
-Control File:   E:/gitProject/csv_to_db/laravelApp/storage/app/csvData/ctl_cim_suits.ctl
-Data File:      E:/gitProject/csv_to_db/laravelApp/storage/app/csvData/SUIT.INFO.20240210.csv
-  Bad File:     E:/gitProject/csv_to_db/laravelApp/storage/app/csvData/bad_SUIT.INFO.20240210.csv
+Control File:   E:/gitProject/csv_to_db/laravelApp/storage/app/ctl/ctl_cim_suits.ctl
+Data File:      E:/gitProject/csv_to_db/laravelApp/storage/app/csvData/SUIT.INFO.20240224.csv
+  Bad File:     E:/gitProject/csv_to_db/laravelApp/storage/app/badFile/bad_SUIT.INFO.20240224.csv
   Discard File:  none specified
  
  (Allow all discards)
@@ -110,12 +110,12 @@ CAUSE_OF_SUIT                        NEXT  4000   |       CHARACTER
     Enclosure string : ' " '
 AS_ON                                NEXT     *   |       CHARACTER            
     Enclosure string : ' " '
-    SQL string for column : "20240202"
+    SQL string for column : "20240224"
 
 value used for ROWS parameter changed from 250 to 46
 
 Table CIM_SUITS:
-  17946 Rows successfully loaded.
+  18015 Rows successfully loaded.
   0 Rows not loaded due to data errors.
   0 Rows not loaded because all WHEN clauses were failed.
   0 Rows not loaded because all fields were null.
@@ -125,12 +125,12 @@ Space allocated for bind array:                1026996 bytes(46 rows)
 Read   buffer bytes: 1048576
 
 Total logical records skipped:          0
-Total logical records read:         17946
+Total logical records read:         18015
 Total logical records rejected:         0
 Total logical records discarded:        0
 
-Run began on Mon Feb 12 16:22:59 2024
-Run ended on Mon Feb 12 16:23:02 2024
+Run began on Thu Feb 29 11:56:03 2024
+Run ended on Thu Feb 29 11:56:05 2024
 
-Elapsed time was:     00:00:02.55
-CPU time was:         00:00:00.31
+Elapsed time was:     00:00:02.03
+CPU time was:         00:00:00.39

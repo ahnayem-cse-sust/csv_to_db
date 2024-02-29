@@ -11,7 +11,7 @@ class UtilityService{
 
     }
 
-    public function createTable($table_name){
+    public function createTable($table_name,$date){
         $db = "(DESCRIPTION=(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = ".env('ORACLE_DB_HOST')
         .")(PORT = ".env('ORACLE_DB_PORT').")))(CONNECT_DATA=(SID=".env('ORACLE_DB_SERVICE_NAME').")))" ;
 
@@ -24,6 +24,9 @@ class UtilityService{
 
                 oci_fetch_all($s, $res);
                 $as_on = $res['AS_ON'][0];
+                if($date == $as_on){
+                    return false;
+                }
                 $rename_table_query = "rename ".$table_name." to ".$table_name."_".$as_on;
                 $s = oci_parse($con, $rename_table_query);
 
@@ -50,15 +53,15 @@ class UtilityService{
      }
 
     public function downloadCsv($filename){
-        try{
-            $result = Storage::disk('local')->writeStream('csvData/'.$filename, Storage::disk('sftp')->readStream($filename));
-        }catch(Exception $e){
-            print_r($e);
-            echo "ff";
-            dd();
+        if(Storage::disk('local')->exists('csvData/'.$filename)){
+            return true;
         }
-        return $result;
         
+        if(Storage::disk('sftp')->exists($filename)){
+            Storage::disk('local')->writeStream('csvData/'.$filename, Storage::disk('sftp')->readStream($filename));
+            return true;
+        }
+        return false;
     }
 
     public function createCtl($file,$content){
@@ -71,12 +74,12 @@ class UtilityService{
 
     public function runLoader($file){
         $cmd="sqlldr ".env('ORACLE_DB_USERNAME')."/".env('ORACLE_DB_PASSWORD')."@".
-        env('ORACLE_DB_HOST').":".env('ORACLE_DB_PORT')."/".env('ORACLE_DB_SERVICE_NAME')." 
-        control=".env('STORAGE_LOCATION')."ctl/".$file;
+        env('ORACLE_DB_HOST').":".env('ORACLE_DB_PORT')."/".env('ORACLE_DB_SERVICE_NAME')." control=".env('STORAGE_LOCATION')."ctl/".$file;
+        // dd($cmd);
         $output=null;
         $retval=null;
         exec($cmd, $output, $retval);
-        echo $retval;
+        // echo $retval;
         return true;
     }
 
