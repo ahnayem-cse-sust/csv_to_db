@@ -4,7 +4,7 @@ namespace App\Http\Services;
 use Illuminate\Support\Facades\Storage;
 
 
-class UtilityService{
+class UploadService{
 
 
     public function __construct(){

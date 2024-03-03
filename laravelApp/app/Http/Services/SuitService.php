@@ -5,22 +5,22 @@ namespace App\Http\Services;
 
 class SuitService{
 
-    private $util;
+    private $uploadService;
     public function __construct(){
-        $this->util = new \App\Http\Services\UtilityService();
+        $this->uploadService = new \App\Http\Services\UploadService();
     }
 
     public function suit($date){
         $data_file = 'SUIT.INFO.'.$date.'.csv';
-        if($this->util->downloadCsv($data_file)){
+        if($this->uploadService->downloadCsv($data_file)){
             $ctl_file = 'ctl_cim_suits.ctl';
             $ctl_content = $this->getSuitCtlContent($data_file,$date);
 
-            if($this->util->createCtl($ctl_file,$ctl_content)){
-                if($this->util->createTable("cim_suits",$date)){
+            if($this->uploadService->createCtl($ctl_file,$ctl_content)){
+                if($this->uploadService->createTable("cim_suits",$date)){
 
-                    $runLoader = $this->util->runLoader($ctl_file);
-                    $ctlDlt = $this->util->deleteCtl($ctl_file);
+                    $runLoader = $this->uploadService->runLoader($ctl_file);
+                    $ctlDlt = $this->uploadService->deleteCtl($ctl_file);
                     return $runLoader;
                 }
             }
@@ -31,7 +31,7 @@ class SuitService{
     private function getSuitCtlContent($data_file,$date){
         
         $quot = "'";
-        $content = $this->util->getCtlHead($data_file).'
+        $content = $this->uploadService->getCtlHead($data_file).'
         
         APPEND INTO TABLE CIM_SUITS
         FIELDS TERMINATED BY "|" OPTIONALLY ENCLOSED BY '.$quot.' " '.$quot.' TRAILING NULLCOLS
