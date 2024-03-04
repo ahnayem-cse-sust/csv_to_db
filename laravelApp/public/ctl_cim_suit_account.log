@@ -1,0 +1,55 @@
+
+SQL*Loader: Release 19.0.0.0.0 - Production on Mon Mar 4 13:03:14 2024
+Version 19.21.0.0.0
+
+Copyright (c) 1982, 2023, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   E:/gitProject/csv_to_db/laravelApp/storage/app/ctl/ctl_cim_suit_account.ctl
+Data File:      E:/gitProject/csv_to_db/laravelApp/storage/app/csvData/SUIT.INFO.AC.20240304.csv
+  Bad File:     E:/gitProject/csv_to_db/laravelApp/storage/app/badFile/bad_SUIT.INFO.AC.20240304.csv
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     250 rows, maximum of 1048576 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table CIM_SUITS_ACCOUNT, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+REC_ID                              FIRST     *   |       CHARACTER            
+    Enclosure string : ' " '
+ACCOUNT_NO                           NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+AS_ON                                NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+    SQL string for column : "20240304"
+
+
+Table CIM_SUITS_ACCOUNT:
+  3797 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 193500 bytes(250 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:          3797
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Mon Mar 04 13:03:14 2024
+Run ended on Mon Mar 04 13:03:15 2024
+
+Elapsed time was:     00:00:00.32
+CPU time was:         00:00:00.15

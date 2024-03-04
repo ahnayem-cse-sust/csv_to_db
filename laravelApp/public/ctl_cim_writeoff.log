@@ -1,0 +1,98 @@
+
+SQL*Loader: Release 19.0.0.0.0 - Production on Mon Mar 4 13:03:15 2024
+Version 19.21.0.0.0
+
+Copyright (c) 1982, 2023, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   E:/gitProject/csv_to_db/laravelApp/storage/app/ctl/ctl_cim_writeoff.ctl
+Data File:      E:/gitProject/csv_to_db/laravelApp/storage/app/csvData/WRITE.OFF.20240304.csv
+  Bad File:     E:/gitProject/csv_to_db/laravelApp/storage/app/badFile/bad_WRITE.OFF.20240304.csv
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     250 rows, maximum of 1048576 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table CIM_LOAN_WRITE_OFF, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+REC_ID                              FIRST     *   |       CHARACTER            
+    Enclosure string : ' " '
+AC_NAME                              NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+CATEGORY                             NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+AC_OPENING_DATE                      NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+BOARD_MET_NO                         NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+BOARD_MET_DATE                       NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+WR_CCY                               NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+INT_RATE                             NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+WO_PRIN_AMT                          NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+CHARGE_INT                           NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+NON_CHARGE_INT                       NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+PENAL_INT                            NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+OTHER_INT                            NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+TOT_WO_AMT                           NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+RECOVERY_AMT                         NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+SUIT_FIELD                           NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+HO_DISB_AMT                          NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+INT_SUSP_AMT                         NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+WO_DATE                              NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+OTHERS_COST                          NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+LAST_BALANCE                         NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+RECORD_STATUS                        NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+CO_CODE                              NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+AS_ON                                NEXT     *   |       CHARACTER            
+    Enclosure string : ' " '
+    SQL string for column : "20240304"
+
+value used for ROWS parameter changed from 250 to 169
+
+Table CIM_LOAN_WRITE_OFF:
+  6188 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                1046448 bytes(169 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:          6188
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Mon Mar 04 13:03:15 2024
+Run ended on Mon Mar 04 13:03:16 2024
+
+Elapsed time was:     00:00:00.37
+CPU time was:         00:00:00.17

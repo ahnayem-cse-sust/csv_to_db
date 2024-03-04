@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+Route::get('/uploadTodayData', [App\Http\Controllers\UploadController::class, 'uploadTodayData']);
+
 Route::get('/suit/{date}', [App\Http\Controllers\DataReadController::class, 'suit']);
-
-
 
 
 
