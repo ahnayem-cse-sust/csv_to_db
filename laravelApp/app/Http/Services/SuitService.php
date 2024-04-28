@@ -17,11 +17,12 @@ class SuitService{
             $ctl_content = $this->getSuitCtlContent($data_file,$date);
 
             if($this->uploadService->createCtl($ctl_file,$ctl_content)){
-                if($this->uploadService->createTable("cim_suits",$date)){
-
-                    $runLoader = $this->uploadService->runLoader($ctl_file);
-                    $ctlDlt = $this->uploadService->deleteCtl($ctl_file);
-                    return $runLoader;
+                $truncateTable = $this->uploadService->truncateTable('cim_suits_temp');
+                $runLoader = $this->uploadService->runLoader($ctl_file);
+                $ctlDlt = $this->uploadService->deleteCtl($ctl_file);
+                
+                if($runLoader){
+                    
                 }
             }
         }
@@ -33,7 +34,7 @@ class SuitService{
         $quot = "'";
         $content = $this->uploadService->getCtlHead($data_file).'
         
-        APPEND INTO TABLE CIM_SUITS
+        APPEND INTO TABLE CIM_SUITS_TEMP
         FIELDS TERMINATED BY "|" OPTIONALLY ENCLOSED BY '.$quot.' " '.$quot.' TRAILING NULLCOLS
         (
         REC_ID, 
@@ -78,7 +79,7 @@ class SuitService{
         CO_CODE,
         CASED_BY,
         CAUSE_OF_SUIT char(4000),
-        AS_ON "'.$date.'"
+        AS_ON
         )';
 
         return $content;

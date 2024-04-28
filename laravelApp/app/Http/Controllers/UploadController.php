@@ -15,6 +15,20 @@ class UploadController extends Controller
     public function uploadTodayData()
     {
         $suit = new \App\Http\Services\SuitService();
+        $dt = Carbon::yesterday();
+
+        $suit->suit($dt->format('Ymd'));
+
+        // $suit->suit($dt->format('Ymd'));
+        // $suit->suitAccount($dt->format('Ymd'));
+        // $suit->suitCost($dt->format('Ymd'));
+        // $suit->suitWriteOff($dt->format('Ymd'));
+        return true;
+    }
+
+    public function uploadIncrementalData()
+    {
+        $suit = new \App\Http\Services\SuitService();
         $dt = Carbon::now();
         $suit->suit($dt->format('Ymd'));
         $suit->suitAccount($dt->format('Ymd'));
@@ -22,4 +36,5 @@ class UploadController extends Controller
         $suit->suitWriteOff($dt->format('Ymd'));
         return true;
     }
+
 }

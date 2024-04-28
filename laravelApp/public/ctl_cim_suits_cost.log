@@ -1,12 +1,12 @@
 
-SQL*Loader: Release 19.0.0.0.0 - Production on Mon Mar 4 13:03:15 2024
+SQL*Loader: Release 19.0.0.0.0 - Production on Thu Mar 7 10:51:41 2024
 Version 19.21.0.0.0
 
 Copyright (c) 1982, 2023, Oracle and/or its affiliates.  All rights reserved.
 
 Control File:   E:/gitProject/csv_to_db/laravelApp/storage/app/ctl/ctl_cim_suits_cost.ctl
-Data File:      E:/gitProject/csv_to_db/laravelApp/storage/app/csvData/SUIT.COST.20240304.csv
-  Bad File:     E:/gitProject/csv_to_db/laravelApp/storage/app/badFile/bad_SUIT.COST.20240304.csv
+Data File:      E:/gitProject/csv_to_db/laravelApp/storage/app/csvData/SUIT.COST.20240307.csv
+  Bad File:     E:/gitProject/csv_to_db/laravelApp/storage/app/badFile/bad_SUIT.COST.20240307.csv
   Discard File:  none specified
  
  (Allow all discards)
@@ -38,7 +38,7 @@ REMARK_IF_OTHER                      NEXT     *   |       CHARACTER
     Enclosure string : ' " '
 AS_ON                                NEXT     *   |       CHARACTER            
     Enclosure string : ' " '
-    SQL string for column : "20240304"
+    SQL string for column : "20240307"
 
 
 Table CIM_SUITS_COST:
@@ -56,8 +56,8 @@ Total logical records read:          4039
 Total logical records rejected:         0
 Total logical records discarded:        0
 
-Run began on Mon Mar 04 13:03:15 2024
-Run ended on Mon Mar 04 13:03:15 2024
+Run began on Thu Mar 07 10:51:41 2024
+Run ended on Thu Mar 07 10:51:42 2024
 
-Elapsed time was:     00:00:00.31
-CPU time was:         00:00:00.20
+Elapsed time was:     00:00:00.28
+CPU time was:         00:00:00.13

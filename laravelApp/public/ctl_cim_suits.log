@@ -1,12 +1,12 @@
 
-SQL*Loader: Release 19.0.0.0.0 - Production on Mon Mar 4 13:03:43 2024
+SQL*Loader: Release 19.0.0.0.0 - Production on Wed Apr 3 12:27:13 2024
 Version 19.21.0.0.0
 
 Copyright (c) 1982, 2023, Oracle and/or its affiliates.  All rights reserved.
 
 Control File:   E:/gitProject/csv_to_db/laravelApp/storage/app/ctl/ctl_cim_suits.ctl
-Data File:      E:/gitProject/csv_to_db/laravelApp/storage/app/csvData/SUIT.INFO.20240304.csv
-  Bad File:     E:/gitProject/csv_to_db/laravelApp/storage/app/badFile/bad_SUIT.INFO.20240304.csv
+Data File:      E:/gitProject/csv_to_db/laravelApp/storage/app/csvData/SUIT.INFO.20240402.csv
+  Bad File:     E:/gitProject/csv_to_db/laravelApp/storage/app/badFile/bad_SUIT.INFO.20240402.csv
   Discard File:  none specified
  
  (Allow all discards)
@@ -110,20 +110,270 @@ CAUSE_OF_SUIT                        NEXT  4000   |       CHARACTER
     Enclosure string : ' " '
 AS_ON                                NEXT     *   |       CHARACTER            
     Enclosure string : ' " '
-    SQL string for column : "20240304"
+    SQL string for column : "20240402"
 
 value used for ROWS parameter changed from 250 to 46
-Record 9891: Rejected - Error on table CIM_SUITS, column PRST_POS_IF_OTHER.
-Field in data file exceeds maximum length
-SQL*Loader-522: lfiopn failed for file (E:/gitProject/csv_to_db/laravelApp/storage/app/badFile/bad_SUIT.INFO.20240304.csv)
-SQL*Loader-553: file not found
-SQL*Loader-509: System error: The system cannot find the file specified.
-SQL*Loader-2026: the load was aborted because SQL Loader cannot continue.
-Specify SKIP=9852 when continuing the load.
+Record 2: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 4: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 6: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 8: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 10: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 12: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 14: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 16: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 18: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 20: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 22: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 24: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 26: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 28: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 30: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 32: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 34: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 36: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 38: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 40: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 42: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 44: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 46: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 48: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 50: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 52: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 54: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 56: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 58: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 60: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 62: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 64: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 66: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 68: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 70: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 72: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 74: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 76: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 78: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 80: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 82: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 84: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 86: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 88: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 90: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 92: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 94: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 96: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 98: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 100: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+Record 102: Rejected - Error on table CIM_SUITS.
+ORA-04091: table RPTUSER.CIM_SUITS is mutating, trigger/function may not see it
+ORA-06512: at "RPTUSER.INCREMENTAL_SUIT_TRIGGER", line 4
+ORA-04088: error during execution of trigger 'RPTUSER.INCREMENTAL_SUIT_TRIGGER'
+
+
+MAXIMUM ERROR COUNT EXCEEDED - Above statistics reflect partial run.
 
 Table CIM_SUITS:
-  9852 Rows successfully loaded.
-  1 Row not loaded due to data errors.
+  51 Rows successfully loaded.
+  51 Rows not loaded due to data errors.
   0 Rows not loaded because all WHEN clauses were failed.
   0 Rows not loaded because all fields were null.
 
@@ -132,12 +382,12 @@ Space allocated for bind array:                1026996 bytes(46 rows)
 Read   buffer bytes: 1048576
 
 Total logical records skipped:          0
-Total logical records read:          9891
-Total logical records rejected:         1
+Total logical records read:           129
+Total logical records rejected:        51
 Total logical records discarded:        0
 
-Run began on Mon Mar 04 13:03:43 2024
-Run ended on Mon Mar 04 13:03:44 2024
+Run began on Wed Apr 03 12:27:13 2024
+Run ended on Wed Apr 03 12:27:13 2024
 
-Elapsed time was:     00:00:01.19
-CPU time was:         00:00:00.25
+Elapsed time was:     00:00:00.31
+CPU time was:         00:00:00.11
