@@ -12,17 +12,18 @@ class SuitService{
 
     public function suit($date){
         $data_file = 'SUIT.INFO.'.$date.'.csv';
+
         if($this->uploadService->downloadCsv($data_file)){
+            
             $ctl_file = 'ctl_cim_suits.ctl';
             $ctl_content = $this->getSuitCtlContent($data_file,$date);
 
             if($this->uploadService->createCtl($ctl_file,$ctl_content)){
-                $truncateTable = $this->uploadService->truncateTable('cim_suits_temp');
-                $runLoader = $this->uploadService->runLoader($ctl_file);
-                $ctlDlt = $this->uploadService->deleteCtl($ctl_file);
-                
-                if($runLoader){
-                    
+                if($this->uploadService->truncateTable('cim_suits_temp')){
+                    if($this->uploadService->runLoader($ctl_file)){
+                        $this->uploadService->deleteCtl($ctl_file);
+                        return true;
+                    }
                 }
             }
         }

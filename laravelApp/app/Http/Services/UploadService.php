@@ -82,9 +82,14 @@ class UploadService{
         $db = "(DESCRIPTION=(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = ".env('ORACLE_DB_HOST').
         ")(PORT = ".env('ORACLE_DB_PORT').")))(CONNECT_DATA=(SID=".env('ORACLE_DB_SERVICE_NAME').")))" ;
 
-        if($c = OCILogon(env('ORACLE_DB_USERNAME'), env('ORACLE_DB_PASSWORD'), $db))
+        if($con = OCILogon(env('ORACLE_DB_USERNAME'), env('ORACLE_DB_PASSWORD'), $db))
         {
-            echo "Successfully connected to Oracle.\n";
+            $query = "truncate table ".$table_name;
+            $s = oci_parse($con, $query);
+            if(oci_execute($s)){
+                OCILogoff($c);
+                return true;
+            }
             OCILogoff($c);
         }
         else
@@ -92,8 +97,7 @@ class UploadService{
             $err = OCIError();
             echo "Connection failed." . $err[text];
         }
-        dd();
-        return true;
+        return false;
     }
 
     public function runLoader($file){
