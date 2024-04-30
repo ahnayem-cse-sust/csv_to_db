@@ -87,10 +87,10 @@ class UploadService{
             $query = "truncate table ".$table_name;
             $s = oci_parse($con, $query);
             if(oci_execute($s)){
-                OCILogoff($c);
+                OCILogoff($con);
                 return true;
             }
-            OCILogoff($c);
+            OCILogoff($con);
         }
         else
         {

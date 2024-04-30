@@ -16,8 +16,11 @@ class UploadController extends Controller
     {
         $suit = new \App\Http\Services\SuitService();
         $dt = Carbon::yesterday();
+        $oracleManager = \App\Http\Services\OracleManager::getInstance();
 
-        $suit->suit($dt->format('Ymd'));
+        if($suit->suit($dt->format('Ymd'))){
+            $oracleManager->dataUploadByTableName('cim_suits');
+        }
 
         // $suit->suit($dt->format('Ymd'));
         // $suit->suitAccount($dt->format('Ymd'));

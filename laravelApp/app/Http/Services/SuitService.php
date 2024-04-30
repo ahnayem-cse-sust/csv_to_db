@@ -14,14 +14,14 @@ class SuitService{
         $data_file = 'SUIT.INFO.'.$date.'.csv';
 
         if($this->uploadService->downloadCsv($data_file)){
-            
+
             $ctl_file = 'ctl_cim_suits.ctl';
             $ctl_content = $this->getSuitCtlContent($data_file,$date);
 
             if($this->uploadService->createCtl($ctl_file,$ctl_content)){
                 if($this->uploadService->truncateTable('cim_suits_temp')){
                     if($this->uploadService->runLoader($ctl_file)){
-                        $this->uploadService->deleteCtl($ctl_file);
+                        $delCtl = $this->uploadService->deleteCtl($ctl_file);
                         return true;
                     }
                 }
