@@ -73,7 +73,6 @@ class OracleManager{
      */
     public function dataUploadByTableName($table_name)
     {
-        dd('fffffffffff');
         $his_statement ='insert into '.$table_name.'_his 
                         select * from '.$table_name.'
                         where rec_id in

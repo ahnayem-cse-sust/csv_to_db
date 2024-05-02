@@ -19,7 +19,9 @@ class UploadController extends Controller
         $oracleManager = \App\Http\Services\OracleManager::getInstance();
 
         if($suit->suit($dt->format('Ymd'))){
-            $oracleManager->dataUploadByTableName('cim_suits');
+            if($oracleManager->dataUploadByTableName('cim_suits')){
+                echo "Suit data updated successfully.";
+            }
         }
 
         // $suit->suit($dt->format('Ymd'));
