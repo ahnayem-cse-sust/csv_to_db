@@ -23,14 +23,14 @@ The following steps are maintiaed on this automated system:
 ### Installing
 
 * Prepare the .env file with additional env varialbe with corresponding information
-  ORACLE_DB_HOST=
-  ORACLE_DB_PORT=
-  ORACLE_DB_DATABASE=
-  ORACLE_DB_USERNAME=
-  ORACLE_DB_PASSWORD=
-  ORACLE_DB_SERVICE_NAME=
+   1. ORACLE_DB_HOST=
+   2. ORACLE_DB_PORT=
+   3. ORACLE_DB_DATABASE=
+   4. ORACLE_DB_USERNAME=
+   5. ORACLE_DB_PASSWORD=
+   6. ORACLE_DB_SERVICE_NAME=
 * composer install
-Now the projectg is ready to run.
+* Now the projectg is ready to run.
 
 
 ## License
